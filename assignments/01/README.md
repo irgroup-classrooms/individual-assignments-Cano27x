@@ -22,9 +22,10 @@ Tabelle
 | Fett               | **fett**        |
 | Link               | [Linkname](URL) |
 
-Inspirierendes Zitat
-"Data beats emotions."
-– Sean Rad
+Zitat
+"It's easy to lie with statistics. It's hard to tell the truth without
+statistics."
+– Andrejs Dunkels
 
 Python Code
 print("Hello World!")
