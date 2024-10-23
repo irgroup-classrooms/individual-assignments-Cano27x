@@ -39,7 +39,7 @@ dieser Text ist fett
 
 dieser Text ist kursiv
 GitHub
-tolga2004 - Overview
+ - Overview
 I am studying Data and Information Science at TH Köln 😈 
 Bild
 ﻿
