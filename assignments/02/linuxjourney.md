@@ -1,1 +1,1 @@
-
+Visit https://linuxjourney.com/the-shell. Read each of the 19 lessons carefully, answer the quizzes (lower right), and also do the exercises (upper right). Please document the questions and your answers, as well as the command line outputs of the exercises in a Markdown-formatted file linuxjourney.md and add it to this subfolder. Please remember that you can also document your command line outputs with verbatim code.
