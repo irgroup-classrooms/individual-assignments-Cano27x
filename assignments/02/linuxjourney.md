@@ -4,20 +4,21 @@ Visit https://linuxjourney.com/the-shell. Read each of the 19 lessons carefully,
 Exercises:
 $ date: Gibt das aktuelle Datum und die Uhrzeit aus, z. B.: Mon Oct 28 12:34:56 UTC 2024
 $ whoami: Gibt den Namen des aktuellen Benutzers aus, z. B.: pete
+
 Quiz:
 Die Ausgabe wird Hello World sein.
 
-2)
+3)
 Quiz:
 Der Befehl ist pwd.
 
-3)
+4)
 Exercises:
 Der Befehl cd ohne jegliche Flags bringt dich in dein Home-Verzeichnis (z. B. /home/pete).
 Quiz:
 Der Befehl ist cd ..
 
-4)
+5)
 Exercises:
 Der Befehl ls -R zeigt alle Dateien und Verzeichnisse rekursiv an, also inklusive der Inhalte von Unterverzeichnissen.
 Der Befehl ls -r listet die Dateien und Verzeichnisse in umgekehrter Reihenfolge auf.
@@ -25,7 +26,7 @@ Der Befehl ls -t sortiert die Dateien und Verzeichnisse nach Änderungszeit und 
 Quiz:
 Das Flag ls -a zeigt alle Dateien, einschließlich der versteckten Dateien.
 
-5)
+6)
 Excercises:
 $ touch mysuperduperfile
 $ ls -l mysuperduperfile
@@ -34,14 +35,14 @@ $ touch mysuperduperfile
 Quiz:
 touch myfile
 
-6)
+7)
 Exercises:
 $ file banana.jpg
 banana.jpg: JPEG image data, JFIF standard 1.01
 Quiz:
 Der Befehl ist file
 
-7)
+8)
 Exercises:
 $ cat dogfile
 $ cat dogfile birdfile
@@ -49,7 +50,7 @@ This is a dog. This is a bird.
 Quiz:
 Der Befehl ist cat
 
-8)
+9)
 Exercises:
 $ less /home/pete/Documents/text1
 Tasten Page Up und Page Down, um durch die Datei zu navigieren.
@@ -58,7 +59,7 @@ Tasten ↑ und ↓
 Quiz:
 Der Befehl ist q
 
-9)
+10)
 Ctrl + R
 1  ls
 2  cd /home/pete
@@ -67,19 +68,19 @@ Ctrl + R
 Quiz:
 Der Befehl ist clear
 
-10)
+11)
 Exercises:
 Quiz:
 Der Befehl ist -r
 
-11)
+12)
 Exercises:
 $ mv oldname.txt newname.txt
 $ mv newname.txt /home/pete/Documents
 Quiz:
 Befehlt lautet mv cat dog
 
-12)
+13)
 Exercises:
 $ mkdir music videos
 $ mv song.mp3 music/
@@ -87,20 +88,20 @@ $ mv movie.mp4 videos/
 Quiz:
 Befehl lautet mkdir
 
-13)
+14)
 Exercises:
 $ touch -- -file
 $ rm -- -file
 Quiz:
 Befehl lautet rm myfile
 
-14)
+15)
 Exercises:
 $ find / -name "*net*"
 Quiz:
 Befehl lautet -name
 
-15)
+16)
 Exercises:
 $ help echo
 $ help logout
@@ -108,19 +109,19 @@ $ help pwd
 Quiz:
 Befehl ist help 
 
-16)
+17)
 Exercises:
 $ man ls
 Quiz:
 Befehl lauter man
 
-17)
+18)
 Exercises:
 $ whatis less
 Quiz:
 Befehl lautet whatis
 
-18)
+19)
 Exercises:
 $ alias ll='ls -l'
 $ alias gs='git status'
@@ -129,7 +130,7 @@ $ unalias gs
 Quiz:
 Befehl ist alias
 
-19)
+20)
 Exercises:
 Terminal-Sitzung wird beendet
 Quiz:
