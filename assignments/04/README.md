@@ -65,6 +65,7 @@ grep -o -E '\b\d*7\b' csv/contacts.csv
 ``` 
 10.	Extract all instances of first names that end with the letter 'e'.
 ``` 
+grep -o -E '\b\w*e\b' csv/contacts.csv
 
 ``` 
 
