@@ -41,7 +41,9 @@ grep 'USA$' csv/contacts.csv
 
 ``` 
 6. Extract the last names of all people.
-``` 
+```
+grep -o -E '\b\w+$' csv/contacts.csv
+
 
 ``` 
 7. Extract all email domains (part after the @ sign).
