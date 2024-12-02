@@ -11,6 +11,7 @@ In this exercise, you will be working with **Lord of the Rings** data. The datas
 
 
 3. Identify "dirty" data fields and clean them up. Use regex replace, spreadsheets, OpenRefine or whatever you like.
+
 Entfernen von führenden und folgenden Leerzeichen:
 import re
 cleaned_character = re.sub(r'^\s+|\s+?$', '', character)
