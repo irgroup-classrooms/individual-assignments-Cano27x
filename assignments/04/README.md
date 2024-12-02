@@ -83,3 +83,85 @@ In this directory, you will find another file called `csv/orders.csv` and also a
 8.	Count the occurrence of each product in the text. (You may want to use the Counter class from the collections package.)
 9.	Extract the orders with prices ending in .99.
 10.	Find the cheapest product. (You may want to use Python's min() method.)
+
+Lösung: 
+import re
+import csv
+from collections import Counter
+from datetime import datetime
+
+file_path = 'csv/orders.csv'
+
+order_number_regex = r'\b\d{5,10}\b'  # Angenommen, Bestellnummern sind Zahlen zwischen 5 und 10 Ziffern
+product_name_regex = r'(?<=Product:)([A-Za-z0-9\s]+)'  # Produkname nach dem "Product:"-Tag
+price_regex = r'\$([0-9]+\.[0-9]{2})'  # Preis im Format $xxx.xx
+date_regex = r'\d{2}/\d{2}/\d{4}'  # Datum im Format dd/mm/yyyy
+
+# Funktion zum Parsen der Datei
+def parse_orders():
+    with open(file_path, newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        all_orders = list(reader)
+    
+    order_numbers = []
+    product_names = []
+    prices = []
+    dates = []
+    products_over_500 = []
+    long_product_names = []
+    prices_ending_in_99 = []
+    product_counter = Counter()
+
+    for order in all_orders:
+        order_number = order[0]  # Angenommene Position für die Bestellnummer
+        product_name = order[1]  # Angenommene Position für den Produktnamen
+        price = order[2]  # Angenommene Position für den Preis
+        order_date = order[3]  # Angenommene Position für das Datum
+        
+        # Extrahiere und speichere Bestellnummern
+        order_numbers.extend(re.findall(order_number_regex, order_number))
+        
+        # Extrahiere und speichere Produktnamen
+        product_names.extend(re.findall(product_name_regex, product_name))
+        
+        # Extrahiere und speichere Preise
+        prices.extend(re.findall(price_regex, price))
+        
+        # Extrahiere und speichere Daten
+        dates.extend(re.findall(date_regex, order_date))
+        
+        # Filtere Bestellungen mit Preisen über $500
+        if float(price[1:]) > 500:
+            products_over_500.append(order)
+        
+        # Finde Produktnamen mit mehr als 6 Zeichen
+        if len(product_name) > 6:
+            long_product_names.append(product_name)
+        
+        # Finde Preise, die auf .99 enden
+        if price.endswith('.99'):
+            prices_ending_in_99.append(order)
+        
+        # Zähle Vorkommen jedes Produkts
+        product_counter[product_name] += 1
+    
+    # Konvertiere Datum in das Format DD/MM/YYYY
+    converted_dates = [datetime.strptime(date, "%d/%m/%Y").strftime("%d/%m/%Y") for date in dates]
+
+    # Finde das billigste Produkt
+    cheapest_product = min(prices, key=lambda x: float(x[1:]))
+    
+    # Ausgabe der Ergebnisse
+    print("Order Numbers:", order_numbers)
+    print("Product Names:", product_names)
+    print("Prices:", prices)
+    print("Dates:", converted_dates)
+    print("Products over $500:", products_over_500)
+    print("Long Product Names (more than 6 characters):", long_product_names)
+    print("Prices ending in .99:", prices_ending_in_99)
+    print("Product Count:", product_counter)
+    print("Cheapest Product:", cheapest_product)
+
+# Funktion ausführen
+parse_orders()
+
