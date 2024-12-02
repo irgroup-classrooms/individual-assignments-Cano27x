@@ -162,6 +162,5 @@ def parse_orders():
     print("Product Count:", product_counter)
     print("Cheapest Product:", cheapest_product)
 
-# Funktion ausführen
 parse_orders()
 
