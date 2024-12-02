@@ -11,3 +11,10 @@ In this exercise, you will be working with **Lord of the Rings** data. The datas
     * What is the distribution on the three different films? 
     * What are the top 5 characters in the char column?
     * What are the top 5 characters in the dialogues?
+
+
+      ## Datenfelder
+- `character`: Name des Charakters, der den Dialog spricht.
+- `dialogue`: Der Text des Dialogs.
+- `movie`: Der Film, in dem der Dialog vorkommt.
+
