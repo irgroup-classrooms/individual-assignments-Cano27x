@@ -12,6 +12,7 @@ You can add your command line in- and outputs directly to this README file. Alte
 
 1. Extract all email addresses from the text.
 ```
+# Befehl zum Extrahieren der E-Mail-Adressen
 grep -o -E '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}' csv/contacts.csv
 
 ``` 
