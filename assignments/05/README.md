@@ -5,8 +5,8 @@ In this exercise, you will be working with **Lord of the Rings** data. The datas
 1. Download and obtain the following CSV file: [`lotr_scripts.csv`](https://www.kaggle.com/datasets/paultimothymooney/lord-of-the-rings-data?select=lotr_scripts.csv).
 
 2. Document and describe the different data fields.
-- `character`: Name des Charakters, der den Dialog spricht.
-- `dialogue`: Der Text des Dialogs.
+- `char`: Name des Charakters, der den Dialog spricht.
+- `dialog`: Der Text des Dialogs.
 - `movie`: Der Film, in dem der Dialog vorkommt.
 
 
