@@ -47,7 +47,9 @@ grep -o -E '\b\w+$' csv/contacts.csv
 
 ``` 
 7. Extract all email domains (part after the @ sign).
-``` 
+```
+grep -o -E '(?<=@)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}' csv/contacts.csv
+
 
 ``` 
 8.	Extract all instances of the first name ‘David’ along with their full address (street and city).
