@@ -11,7 +11,7 @@ Remember that you can use different tools like `grep`, `awk`, or `sed` to use re
 You can add your command line in- and outputs directly to this README file. Alternatively, you can write a bash script with all commands and commit it to this directory.
 
 1. Extract all email addresses from the text.
-``` 
+``` lksdc
 
 ``` 
 2. Extract all phone numbers from the text.
