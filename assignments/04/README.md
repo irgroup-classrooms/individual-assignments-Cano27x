@@ -60,6 +60,7 @@ grep -o -E '\bDavid\b.*\b\w+\s\w+.*\b\w+\b' csv/contacts.csv
 ``` 
 9.	Find all entries where the phone number ends with ‘7’.
 ``` 
+grep -o -E '\b\d*7\b' csv/contacts.csv
 
 ``` 
 10.	Extract all instances of first names that end with the letter 'e'.
