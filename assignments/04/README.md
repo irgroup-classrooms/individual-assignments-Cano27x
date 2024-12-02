@@ -29,7 +29,9 @@ grep -o -E '\bJ[a-zA-Z]+' csv/contacts.csv
 
 ``` 
 4. Extract all street names that contain the word 'St'.
-``` 
+```
+grep -o -E '\b\w*St\w*\b' csv/contacts.csv
+
 
 ``` 
 5. Extract all addresses in ‘USA’.
