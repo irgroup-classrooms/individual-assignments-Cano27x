@@ -53,7 +53,9 @@ grep -o -E '(?<=@)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}' csv/contacts.csv
 
 ``` 
 8.	Extract all instances of the first name ‘David’ along with their full address (street and city).
-``` 
+```
+grep -o -E '\bDavid\b.*\b\w+\s\w+.*\b\w+\b' csv/contacts.csv
+
 
 ``` 
 9.	Find all entries where the phone number ends with ‘7’.
