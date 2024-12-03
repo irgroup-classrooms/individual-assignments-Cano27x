@@ -1,0 +1,81 @@
+# Aufgabe 3
+Transformationen für OpenRefine:
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "dialog",
+    "expression": "value.replace(/\\s+/,' ').replace(/\\t+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 5,
+    "description": "Remove extra spaces and tabs in dialog column"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "dialog",
+    "expression": "value.strip()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 5,
+    "description": "Remove leading and trailing spaces from dialog column"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "character",
+    "expression": "value.strip()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 5,
+    "description": "Trim whitespace in character column"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "movie",
+    "expression": "value.strip().toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 5,
+    "description": "Convert movie titles to uppercase and remove whitespace"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "dialog",
+    "expression": "grel:value.replace(/[,\\.]/,'').replace(/\\s{2,}/,' ').trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 5,
+    "description": "Remove punctuation and normalize spaces in dialog column"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Unnamed: 0",
+    "newColumnName": "ID",
+    "description": "Rename column 'Unnamed: 0' to 'ID'"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "char",
+    "newColumnName": "character",
+    "description": "Rename column 'char' to 'character' for clarity"
+  }
+]
